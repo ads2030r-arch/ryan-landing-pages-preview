@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'ryan-landing-pages-preview-v1.1.0.zip'
+      - 'ryan-landing-pages-preview-v1.2.0.zip'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -30,9 +30,10 @@ jobs:
         run: |
           rm -rf public
           mkdir -p public
-          unzip -q ryan-landing-pages-preview-v1.1.0.zip -d public
+          unzip -q ryan-landing-pages-preview-v1.2.0.zip -d public
           test -s public/index.html
           test -s public/robots.txt
+          test -s public/404.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
