@@ -1,29 +1,30 @@
-# صفحات الهبوط — مكتب ريان | 1.1.0
+# صفحات الهبوط — مكتب ريان | 1.2.0
 
 **معاينة الصفحات الأربع:** [فتح GitHub Pages](https://ads2030r-arch.github.io/ryan-landing-pages-preview/)
 
-هذه نسخة اختبار عامة لاختبار تصميم ومحتوى صفحات الهبوط قبل أي رفع إلى WordPress.
+إصدار مراجعة يستخدم Bundle الواجهة المحدثة الأصلية من إضافة Ryan Landing Pages، بعد ملاحظة أن نسخة المعاينة 1.1.0 غيّرت الشعار ومظهر البطاقات والصور. يعرض الإصدار 1.2.0 **شعار Header الأصلي `sukuk-updated/logo.png`**، ويحافظ على بطاقات الخدمات المصورة وHero والأقسام كما في الإضافة.
 
 | الخدمة | صفحة المعاينة |
 |---|---|
-| الرفع المساحي | [/lp/surveying-riyadh/](https://ads2030r-arch.github.io/ryan-landing-pages-preview/lp/surveying-riyadh/) |
-| الاستشارات الهندسية | [/lp/engineering-consulting-riyadh/](https://ads2030r-arch.github.io/ryan-landing-pages-preview/lp/engineering-consulting-riyadh/) |
-| رخص البناء والترميم | [/lp/building-permits-riyadh/](https://ads2030r-arch.github.io/ryan-landing-pages-preview/lp/building-permits-riyadh/) |
-| الصكوك العقارية | [/lp/sukuk/](https://ads2030r-arch.github.io/ryan-landing-pages-preview/lp/sukuk/) |
+| الرفع المساحي | [فتح الصفحة](https://ads2030r-arch.github.io/ryan-landing-pages-preview/lp/surveying-riyadh/) |
+| الاستشارات الهندسية | [فتح الصفحة](https://ads2030r-arch.github.io/ryan-landing-pages-preview/lp/engineering-consulting-riyadh/) |
+| رخص البناء والترميم | [فتح الصفحة](https://ads2030r-arch.github.io/ryan-landing-pages-preview/lp/building-permits-riyadh/) |
+| الصكوك العقارية | [فتح الصفحة](https://ads2030r-arch.github.io/ryan-landing-pages-preview/lp/sukuk/) |
 
-## الحزم
+## حزم الإصدار
 
-- [حزمة إضافة WordPress 1.1.0](ryan-landing-pages-v1.1.0.zip) — قابلة للرفع، لكنها **غير مثبتة أو مفعّلة على WordPress**.
-- [أرشيف المعاينة الثابتة 1.1.0](ryan-landing-pages-preview-v1.1.0.zip) — المصدر الذي يفكّه سير GitHub Actions إلى Pages.
-- [بصمات SHA-256](SHA256SUMS) للتحقق من سلامة الحزم.
-- `.github/workflows/pages.yml` مسار النشر إلى GitHub Pages.
+- [حزمة إضافة WordPress 1.2.0](ryan-landing-pages-v1.2.0.zip) — حزمة مراجعة قابلة للرفع، لكنها **غير مثبتة أو مفعّلة على WordPress**.
+- [أرشيف معاينة GitHub Pages 1.2.0](ryan-landing-pages-preview-v1.2.0.zip).
+- [بصمات SHA-256 للإصدار 1.2.0](SHA256SUMS-v1.2.0).
 
-## حدود المعاينة
+## ما الذي جرى الحفاظ عليه؟
 
-الموقع الثابت يحمل `noindex,nofollow` وملف `robots.txt` يمنع الزحف. لا تحفظ الصفحات بيانات الزوار؛ النماذج وأزرار الهاتف وWhatsApp غير فعالة في المعاينة. هذا يسمح بمراجعة النص والتصميم فقط، ولا يمثل اختبار WordPress أو CRM أو GTM/GA4.
+الواجهة الأصلية React/CSS وصورها كما هي. ويحتوي الإصدار أيضاً HTML أولياً لكل صفحة كي يظهر محتواها وبطاقاتها لمحركات البحث قبل تحميل JavaScript؛ ثم تستعيد React التفاعل المعتاد. جرى توحيد العنوان والوصف الخادميين مع القيم التي يعرضها التطبيق بعد التحميل.
 
-حزمة WordPress تستخدم HTML خادميًا للمحتوى والعناوين. في بيئة الإنتاج ستجهز الاستمارة رسالة WhatsApp للمراجعة؛ النقر أو فتح WhatsApp لا يثبت إرسال الرسالة. الإصدار لا يكتب تلقائيًا إلى Ryan Sales CRM ولا يغير إعدادات GTM أو GA4 أو Google Ads.
+## حدود المعاينة والإنتاج
 
-## الحفاظ على الخصوصية والنطاق
+هذه نسخة عامة للمراجعة فقط، وتحمل `noindex,nofollow`. النماذج وروابط الهاتف والبريد وWhatsApp معطلة؛ لا تُرسل بيانات الزوار ولا تمثل اختباراً لـWordPress أو CRM أو GTM/GA4. لا يغير الإصدار أحداث التتبع ولا يسجل تلقائياً في Ryan Sales CRM؛ النقرة أو فتح WhatsApp لا تثبت حصول مكالمة أو إرسال رسالة.
 
-المستودع عام بناءً على اختيار مالك الحساب، ولا يحتوي بيانات دخول أو مفاتيح سرية. لا يمنح المستودع ترخيصًا عامًا لإعادة استخدام العلامة أو المحتوى أو الأصول. لا تستخدم الحزمة على الموقع الإنتاجي قبل المراجعة والاختبار والاعتماد.
+حزمة WordPress لم تُثبت أو تُفعّل على الإنتاج. القالب محصور بالمسارات الأربع ولا يغيّر الصفحة الرئيسية أو الصفحات الأخرى. قبل أي ترقية إنتاجية لاحقة، يجب مراجعة المعاينة والتحقق من النسخة الاحتياطية الكاملة الموجودة وإمكان استعادتها.
+
+المستودع عام بناءً على اختيار مالك الحساب. لا يحتوي مفاتيح سرية أو بيانات دخول. أصول العلامة التجارية والصور تخص مكتب ريان؛ إتاحتها هنا للمعاينة لا تمنح ترخيص إعادة استخدامها.
